@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanías La Nevada</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5dc; /* Beige */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #8b7b56; /* Color marrón suave */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #a18467; /* Cambio de color al pasar el mouse */
+        }
+
+        /* Sección de bienvenida */
+        #bienvenida {
+            background-color: #f1e6d2;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        /* Productos */
+        section#productos {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .producto {
+            display: inline-block;
+            width: 22%;
+            margin: 15px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .producto img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .producto p {
+            margin: 10px 0;
+        }
+
+        .producto button {
+            background-color: #8b7b56;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .producto button:hover {
+            background-color: #a18467;
+        }
+
+        /* Carrito de compras */
+        #carrito {
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #carrito button {
+            background-color: #8b7b56;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        #carrito button:hover {
+            background-color: #a18467;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #8b7b56;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Mensaje de Bienvenida -->
+    <div id="bienvenida">
+        <p>Bienvenidos a Artesanías La Nevada, el hogar de productos artesanales únicos, hechos a mano con amor desde la Sierra Nevada de Santa Marta.</p>
+    </div>
+
+    <!-- Header con menú de navegación -->
+    <header>
+        <h1>Artesanías La Nevada</h1>
+        <nav>
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#carrito">Carrito 🛒</a></li>
+                <li><a href="#atencion">Atención al Cliente</a></li>
+                <li><a href="#origen">Nuestro Origen</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de productos -->
+    <section id="productos">
+        <h2>Productos Artesanales</h2>
+
+        <div class="producto" data-id="1" data-nombre="Collar de Zafiro" data-precio="35.000">
+            <img src="https://i.etsystatic.com/28448563/r/il/fc3fdc/4013551900/il_1080xN.4013551900_28p3.jpg" alt="Collar de Zafiro">
+            <p>Collar de Zafiro</p>
+            <p>Precio: $35.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" data-id="2" data-nombre="Pulsera de Madera" data-precio="5.000">
+            <img src="https://memoriascolombia.com/wp-content/uploads/2021/04/pulseras-2.jpg" alt="Pulsera de Madera">
+            <p>Pulsera tejida</p>
+            <p>Precio: $5.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" data-id="3" data-nombre="Mochila Artesanal" data-precio="80.000">
+            <img src="https://i.etsystatic.com/26344083/r/il/14ab21/2753409914/il_1588xN.2753409914_mpfi.jpg" alt="Mochila Artesanal">
+            <p>Mochila Artesanal</p>
+            <p>Precio: $80.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" data-id="4" data-nombre="Sombrero Hecho a Mano" data-precio="95.000">
+            <img src="https://th.bing.com/th/id/OIP.f3o89K3yKz3m87WVgXVsVwHaF2?rs=1&pid=ImgDetMain" alt="Sombrero Hecho a Mano">
+            <p>Sombrero Hecho a Mano</p>
+            <p>Precio: $95.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <!-- Nuevos productos agregados -->
+        <div class="producto" data-id="5" data-nombre="juego de ceramica" data-precio="120.000">
+            <img src="https://madeheart.com/media/productphoto/250/36111336/1_26_2.jpg" alt="Pulsera de Cuero">
+            <p>juego de ceramica</p>
+            <p>Precio: $120.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" data-id="6" data-nombre="pulsera de cuero" data-precio="10.000">
+            <img src="https://accesoriosmodacolombia.com/wp-content/uploads/2020/12/set-pulseras-unisex.png" alt="Tarro de Cerámica">
+            <p>pulsera de cuero</p>
+            <p>Precio: $10.000</p>
+            <button class="agregar">Agregar al carrito</button>
+        </div>
+    </section>
+
+    <!-- Sección del carrito -->
+    <section id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Total: $<span id="total">0</span></p>
+        <button id="comprar">Comprar</button>
+        <button id="anular-carrito">Anular Carrito</button>
+    </section>
+
+    <!-- Sección de atención al cliente -->
+    <section id="atencion">
+        <h2>Atención al Cliente</h2>
+        <form id="form-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Sección sobre el origen de nuestros productos -->
+    <section id="origen">
+        <h2>El Origen de Nuestros Productos</h2>
+        <p>En Artesanías La Nevada, nuestros productos son elaborados con materiales de la más alta calidad, provenientes de la Sierra Nevada de Santa Marta, una región rica en cultura y tradición...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Artesanías La Nevada - By Yeimer Fisvel</p>
+        <p>Síguenos en redes sociales: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
